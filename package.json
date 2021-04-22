@@ -11,8 +11,12 @@
   "author": "José Manuel Alvarez",
   "license": "ISC",
   "dependencies": {
+    "normalizr": "^3.6.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.3",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",
@@ -24,6 +28,9 @@
     "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@types/react-redux": "^7.1.16",
+    "@types/redux": "^3.6.0",
+    "@types/redux-saga": "^0.10.5",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^3.11.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -33,6 +40,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.4",
+    "redux-devtools-extension": "^2.13.9",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.35.0",

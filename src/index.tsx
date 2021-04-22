@@ -1,6 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './components/App'
+import createSagaMiddleware from 'redux-saga'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { rootReducer, rootSaga } from './store/redux'
 
-const App = () => <h1>My React and TypeScript App!</h1>
+// Sagas
+const sagaMiddleware = createSagaMiddleware()
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(sagaMiddleware))
+)
 
-ReactDOM.render(<App />, document.getElementById('root'))
+sagaMiddleware.run(rootSaga)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
