@@ -1,5 +1,6 @@
 // https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/27570
+// https://www.carlrippon.com/using-css-react-typescript-with-webpack5/
 
 import path from 'path'
 import { Configuration as WebpackConfiguration } from 'webpack'
@@ -12,8 +13,19 @@ interface Configuration extends WebpackConfiguration {
 
 const config: Configuration = {
   entry: './src/index.tsx',
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.css']
+  },
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js'
+  },
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
@@ -29,13 +41,6 @@ const config: Configuration = {
         }
       }
     ]
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js']
-  },
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
   },
   devServer: {
     contentBase: path.join(__dirname, 'build'),

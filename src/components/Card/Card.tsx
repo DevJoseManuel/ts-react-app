@@ -1,5 +1,5 @@
 import React from 'react'
-import { ICard } from '../store/models/card/types'
+import { ICard } from '../../store/models/card/types'
 
 type CardProps = {
   card: ICard
