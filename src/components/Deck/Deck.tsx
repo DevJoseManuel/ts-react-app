@@ -1,29 +1,27 @@
+import _ from 'lodash'
 import React from 'react'
 import Spinner from '../Spinner/Spinner'
 import styles from './deck.module.css'
+import DeckTable from './DeckTable'
+import DeckForm from './DeckForm'
 import { Dispatch } from 'redux'
 import { useDispatch, useSelector } from 'react-redux'
 import { Store } from '../../store/redux'
-import { CardReduxModel, CardReduxEvent } from '../../store/models/card/types'
-import Card from '../Card/Card'
+import { CardReduxEvent, CardReduxUI } from '../../store/models/card/types'
 
 const Deck: React.FC = () => {
   const dispatch: Dispatch<CardReduxEvent> = useDispatch()
-  const isLoading = useSelector<Store, boolean>(state => state.cards.ui.loading)
-  const redux = useSelector<Store, CardReduxModel>(state => state.cards.model)
 
-  console.log(redux.result.map(_id => redux.entities.card[_id]))
+  const ui = useSelector<Store, CardReduxUI>(state => state.cards.ui)
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>Card List</div>
-      <div className={styles.filter}>Autocomplete</div>
-      {isLoading ? (
+      {ui.loading ? (
         <Spinner />
+      ) : _.isEmpty(ui.cardId) ? (
+        <DeckTable />
       ) : (
-        redux.result.map(_id => (
-          <Card key={_id} card={redux.entities.card[_id]} />
-        ))
+        <DeckForm />
       )}
     </div>
   )

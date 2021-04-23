@@ -1,11 +1,12 @@
 .card {
-  border-bottom: 1px solid #d9e2ec;
+  border-bottom: 1px solid var(--gray);
   padding: 4px 8px;
   display: flex;
   align-items: center;
 }
 
 .cardCount {
+  margin-left: 8px;
   width: 38px;
   border-radius: 2px;
   text-align: center;
@@ -23,4 +24,22 @@
   margin-left: 10px;
   flex-grow: 1;
   text-align: left;
+}
+
+.cardName button {
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.cardActions button {
+  border: none;
+  background: none;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--blue);
+  margin-right: 4px;
+  maring-left: 4px;
 }

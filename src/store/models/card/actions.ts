@@ -1,7 +1,37 @@
 import { ICard, CardActionTypes } from './types'
 
+export const clearCardId = (): { type: string } => ({
+  type: CardActionTypes.CLEAR_CARD_ID
+})
+
+export const deleteCard = (
+  cardId: string
+): { type: string; payload: { cardId: string } } => ({
+  type: CardActionTypes.DELETE_CARD,
+  payload: { cardId }
+})
+
+export const editCard = (
+  _id: string,
+  name: string,
+  imageUrl: string
+): {
+  type: string
+  payload: { _id: string; name: string; imageUrl: string }
+} => ({
+  type: CardActionTypes.EDIT_CARD,
+  payload: { _id, name, imageUrl }
+})
+
 export const fetchData = (): { type: string } => ({
   type: CardActionTypes.FETCH_DATA
+})
+
+export const setCardId = (
+  cardId: string
+): { type: string; payload: { cardId: string } } => ({
+  type: CardActionTypes.SET_CARD_ID,
+  payload: { cardId }
 })
 
 export const setCards = (

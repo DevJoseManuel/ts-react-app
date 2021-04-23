@@ -10,7 +10,11 @@ export interface ICard {
 
 /** Defines the action types. */
 export enum CardActionTypes {
+  CLEAR_CARD_ID = 'card/CLEAR_CARD_ID',
+  DELETE_CARD = 'card/DELETE_CARD',
+  EDIT_CARD = 'card/EDIT_CARD',
   FETCH_DATA = 'card/FETCH_DATA',
+  SET_CARD_ID = 'card/SET_CARD',
   SET_CARDS = 'card/SET_CARDS',
   SET_ERROR = 'card/SET_ERROR',
   SET_LOADING = 'card/SET_LOADING'
@@ -23,19 +27,23 @@ export interface CardReduxModel {
   result: string[]
 }
 
-export interface CardUI {
+export interface CardReduxUI {
   loading: boolean
+  cardId?: string
   error?: string
+  message?: string
 }
 
 export type CardReduxEvent =
   | { type: string }
+  | { type: string; payload: { _id: string; name: string; imageUrl: string } }
   | { type: string; payload: { cards: ICard[] } }
+  | { type: string; payload: { cardId: string } }
   | { type: string; payload: { error: string } }
   | { type: string; payload: { isLoading: boolean } }
 
 /** Handles the type of domain state. */
 export interface CardState {
   readonly model: CardReduxModel
-  readonly ui: CardUI
+  readonly ui: CardReduxUI
 }
