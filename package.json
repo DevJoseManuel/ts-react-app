@@ -11,6 +11,8 @@
   "author": "José Manuel Alvarez",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.168",
+    "lodash": "^4.17.21",
     "normalizr": "^3.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
