@@ -1,9 +1,14 @@
 import { all, fork } from 'redux-saga/effects'
 import { combineReducers } from 'redux'
+import { CardState } from './models/card/types'
 import { cardReducer } from './models/card/reducer'
 import { watchFetchCards } from './models/card/sagas'
 
-// Reducers.
+// Redux.
+export interface Store {
+  cards: CardState
+}
+
 export const rootReducer = combineReducers({
   cards: cardReducer
 })

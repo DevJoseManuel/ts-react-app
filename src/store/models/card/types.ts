@@ -16,7 +16,7 @@ export enum CardActionTypes {
   SET_LOADING = 'card/SET_LOADING'
 }
 
-export interface CardModel {
+export interface CardReduxModel {
   entities: {
     card: { [_id: string]: ICard }
   }
@@ -28,8 +28,14 @@ export interface CardUI {
   error?: string
 }
 
+export type CardReduxEvent =
+  | { type: string }
+  | { type: string; payload: { cards: ICard[] } }
+  | { type: string; payload: { error: string } }
+  | { type: string; payload: { isLoading: boolean } }
+
 /** Handles the type of domain state. */
 export interface CardState {
-  readonly model: CardModel
+  readonly model: CardReduxModel
   readonly ui: CardUI
 }
