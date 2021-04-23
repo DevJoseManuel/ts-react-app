@@ -1,0 +1,13 @@
+.wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter {
+  padding: 1em;
+}

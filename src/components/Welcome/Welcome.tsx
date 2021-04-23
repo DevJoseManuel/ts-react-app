@@ -1,9 +1,9 @@
 import React from 'react'
-import welcome from './welcome.module.css'
+import styles from './welcome.module.css'
 
 const Welcome: React.FC = () => (
-  <div className={welcome.centered}>
-    <h1 className='title'>Card List</h1>
+  <div className={styles.wrapper}>
+    <h3>Loading app...</h3>
   </div>
 )
 

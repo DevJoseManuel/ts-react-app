@@ -1,0 +1,26 @@
+.card {
+  border-bottom: 1px solid #d9e2ec;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.cardCount {
+  width: 38px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.cardImage img {
+  height: 30px;
+}
+
+.cardName {
+  margin-left: 10px;
+  flex-grow: 1;
+  text-align: left;
+}
