@@ -22,26 +22,14 @@
 
 .formInput {
   width: 250px;
-  padding: 4px;
-  font-size: 12px;
-  border: 1px solid var(--gray);
 }
 
 .formSubmit {
-  background-color: var(--blue);
-  color: var(--white);
-  padding: 8px;
-  margin-top: 12px;
-  border: none;
-  border-radius: 2px;
-  width: 250px;
+  width: 270px;
 }
 
 .formBack button {
   margin-top: 12px;
-  border: none;
-  background: none;
   font-size: 12px;
   font-weight: 700;
-  color: var(--blue);
 }

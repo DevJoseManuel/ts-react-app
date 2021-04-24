@@ -1,0 +1,25 @@
+.filter {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 2px -2px rgb(0 0 0 / 20%);
+  margin-bottom: 8px;
+}
+
+.filterButton button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 8px;
+  border: 1px solid var(--blue);
+  border-radius: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.filterInput {
+  width: 250px;
+  border-right-color: var(--white);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

@@ -1,7 +1,15 @@
 import { ICard, CardActionTypes } from './types'
 
+export const clearAlert = (): { type: string } => ({
+  type: CardActionTypes.CLEAR_ALERT
+})
+
 export const clearCardId = (): { type: string } => ({
   type: CardActionTypes.CLEAR_CARD_ID
+})
+
+export const clearFilter = (): { type: string } => ({
+  type: CardActionTypes.CLEAR_FILTER
 })
 
 export const deleteCard = (
@@ -46,6 +54,13 @@ export const setError = (
 ): { type: string; payload: { error: string } } => ({
   type: CardActionTypes.SET_ERROR,
   payload: { error }
+})
+
+export const setFilter = (
+  filter: string
+): { type: string; payload: { filter: string } } => ({
+  type: CardActionTypes.SET_FILTER,
+  payload: { filter }
 })
 
 export const setLoading = (

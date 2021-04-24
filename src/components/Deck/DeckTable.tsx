@@ -1,23 +1,28 @@
+import _ from 'lodash'
 import React from 'react'
-import CardRow from '../Card/CardRow'
-import styles from './deck.module.css'
-import Autocomplete from 'react-autocomplete'
+import DeckTableFilter from './DeckTableFilter'
+import DeckTableNoData from './DeckTableNoData'
+import DeckTableBody from './DeckTableBody'
+import styles from './deck-table.module.css'
 import { useSelector } from 'react-redux'
-import { CardReduxModel } from '../../store/models/card/types'
+import { CardState } from '../../store/models/card/types'
 import { Store } from '../../store/redux'
 
 const DeckTable: React.FC = () => {
-  const redux = useSelector<Store, CardReduxModel>(state => state.cards.model)
+  const { model, ui } = useSelector<Store, CardState>(state => state.cards)
+
+  const rows = _.isUndefined(ui.filter) ? model.result : ui.filter.results
+  const text = _.isUndefined(ui.filter) ? '' : ui.filter.text
 
   return (
     <>
-      <div className={styles.title}>Card List</div>
-      <div className={styles.filter}>
-        <Autocomplete />
+      <div className={styles.navbar}>
+        <h2>Card List</h2>
+        <DeckTableFilter text={text} />
       </div>
-      {redux.result.map(_id => (
-        <CardRow key={_id} card={redux.entities.card[_id]} />
-      ))}
+      <div className={styles.main}>
+        {_.isEmpty(rows) ? <DeckTableNoData /> : <DeckTableBody rows={rows} />}
+      </div>
     </>
   )
 }

@@ -18,13 +18,10 @@ const CardRow: React.FC<CardRowProps> = ({ card }) => {
       <div className={styles.cardImage}>
         <img src={card.imageUrl} alt={`Picture of ${card.name}`} />
       </div>
-      <div className={styles.cardName}>
-        <button onClick={() => dispatch(setCardId(card._id))}>
-          {card.name}
-        </button>
-      </div>
+      <div className={styles.cardName}>{card.name}</div>
       <div className={styles.cardActions}>
-        <button onClick={() => dispatch(setCardId(card._id))}>Edit</button> |{' '}
+        <button onClick={() => dispatch(setCardId(card._id))}>Edit</button>
+        &middot;
         <button onClick={() => dispatch(deleteCard(card._id))}>Delete</button>
       </div>
       <div className={styles.cardCount}>{card.count.total}</div>

@@ -16,6 +16,18 @@ const initialState: CardState = {
 /** Card reducer. */
 const reducer: Reducer<CardState> = (state = initialState, action) => {
   switch (action.type) {
+    case CardActionTypes.CLEAR_ALERT:
+      return {
+        ...state,
+        ui: _.omit(state.ui, 'message')
+      }
+
+    case CardActionTypes.CLEAR_FILTER:
+      return {
+        ...state,
+        ui: _.omit(state.ui, 'filter')
+      }
+
     case CardActionTypes.CLEAR_CARD_ID:
       return {
         ...state,
@@ -25,10 +37,16 @@ const reducer: Reducer<CardState> = (state = initialState, action) => {
     case CardActionTypes.DELETE_CARD: {
       const card = _.omit(state.model.entities.card, action.payload.cardId)
       const result = state.model.result.filter(e => e !== action.payload.cardId)
-      return {
-        ...state,
-        model: { entities: { card }, result }
+      const model = { entities: { card }, result }
+
+      const ui = { ..._.omit(state.ui, 'cardId'), message: 'Card deleted!' }
+      if (!_.isUndefined(ui.filter)) {
+        ui.filter.results = ui.filter.results.filter(
+          _id => _id !== action.payload.cardId
+        )
       }
+
+      return { model, ui }
     }
 
     case CardActionTypes.EDIT_CARD: {
@@ -62,6 +80,23 @@ const reducer: Reducer<CardState> = (state = initialState, action) => {
       return {
         ...state,
         error: action.payload.error
+      }
+
+    case CardActionTypes.SET_FILTER:
+      const results = Object.values(state.model.entities.card)
+        .filter(
+          card =>
+            card.name
+              .toLowerCase()
+              .indexOf(action.payload.filter.toLowerCase()) !== -1
+        )
+        .map(card => card._id)
+      return {
+        ...state,
+        ui: {
+          ...state.ui,
+          filter: { text: action.payload.filter, results }
+        }
       }
 
     case CardActionTypes.SET_LOADING:

@@ -24,22 +24,21 @@
   margin-left: 10px;
   flex-grow: 1;
   text-align: left;
-}
-
-.cardName button {
-  border: none;
-  background: none;
   font-size: 14px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--black);
+}
+
+.cardActions {
+  font-size: 12px;
 }
 
 .cardActions button {
   border: none;
   background: none;
-  font-size: 11px;
   font-weight: 400;
+  font-size: 11px;
   color: var(--blue);
   margin-right: 4px;
-  maring-left: 4px;
+  margin-left: 4px;
 }

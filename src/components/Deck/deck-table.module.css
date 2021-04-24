@@ -1,0 +1,13 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+}
+.navbar h2 {
+  background-color: #edeef0;
+  padding: 10px;
+}
+.main {
+  margin-top: 120px;
+}

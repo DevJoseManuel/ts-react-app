@@ -50,12 +50,14 @@ const CardForm: React.FC<CardFormProps> = ({ card }) => {
         />
       </div>
       <div>
-        <button className={styles.formSubmit} type='submit'>
+        <button className={`primary ${styles.formSubmit}`} type='submit'>
           Edit Card
         </button>
       </div>
       <div className={styles.formBack}>
-        <button onClick={() => dispatch(clearCardId())}>Back</button>
+        <button className='link' onClick={() => dispatch(clearCardId())}>
+          Back
+        </button>
       </div>
     </form>
   )
