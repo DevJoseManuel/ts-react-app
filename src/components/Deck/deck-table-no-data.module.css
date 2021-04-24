@@ -1,5 +1,6 @@
 .wrapper {
-  margin-top: 150px;
+  margin-top: 30px;
+  flex-grow: 1;
 }
 
 .wrapper h3 {

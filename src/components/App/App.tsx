@@ -8,6 +8,7 @@ import { Store } from '../../store/redux'
 import { fetchData } from '../../store/models/card/actions'
 import { CardState, CardReduxEvent } from '../../store/models/card/types'
 import { setUser } from '../../store/models/user/actions'
+import '../../assets/css/core.css'
 
 /** Application main component. */
 const App: React.FC = () => {

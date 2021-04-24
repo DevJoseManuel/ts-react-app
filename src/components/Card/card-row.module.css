@@ -63,7 +63,7 @@
   }
 }
 
-/* Media 620px */
+/* Media 450px */
 @media screen and (min-width: 450px) {
   .card {
     flex: 1 0 50%;
@@ -90,7 +90,7 @@
   }
 }
 
-/* Media 600px */
+/* Media 840px */
 @media screen and (min-width: 840px) {
   .card {
     flex: 1 0 33.3%;

@@ -16,17 +16,19 @@ const DeckTableNoData: React.FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      <DeckTableAlert />
-      <h3>{noCards ? 'No cards left' : 'Sorry! no data found'}</h3>
-      <h4>Try something else</h4>
-      <button
-        className='secondary'
-        onClick={() =>
-          noCards ? dispatch(fetchData()) : dispatch(clearFilter())
-        }
-      >
-        {noCards ? 'Reload all cards' : 'Clear filter'}
-      </button>
+      <div>
+        <DeckTableAlert />
+        <h3>{noCards ? 'No cards left' : 'Sorry! no data found'}</h3>
+        <h4>Try something else</h4>
+        <button
+          className='secondary'
+          onClick={() =>
+            noCards ? dispatch(fetchData()) : dispatch(clearFilter())
+          }
+        >
+          {noCards ? 'Reload all cards' : 'Clear filter'}
+        </button>
+      </div>
     </div>
   )
 }
