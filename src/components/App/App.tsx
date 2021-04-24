@@ -7,12 +7,17 @@ import { Dispatch } from 'redux'
 import { Store } from '../../store/redux'
 import { fetchData } from '../../store/models/card/actions'
 import { CardState, CardReduxEvent } from '../../store/models/card/types'
+import { setUser } from '../../store/models/user/actions'
 
 /** Application main component. */
 const App: React.FC = () => {
   const isMounted = useIsMounted()
   const dispatch: Dispatch<CardReduxEvent> = useDispatch()
   const { ui } = useSelector<Store, CardState>(state => state.cards)
+
+  React.useEffect(() => {
+    dispatch(setUser('user-1'))
+  })
 
   React.useEffect(() => {
     if (isMounted()) {

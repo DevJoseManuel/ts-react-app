@@ -1,16 +1,20 @@
 import React from 'react'
 import styles from './card-row.module.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Dispatch } from 'redux'
 import { ICard } from '../../store/models/card/types'
-import { deleteCard, setCardId } from '../../store/models/card/actions'
 import { CardReduxEvent } from '../../store/models/card/types'
+import { callEvent } from '../../store/models/events/actions'
+import { Store } from '../../store/redux'
+import { UserState } from '../../store/models/user/types'
+import { EventActionTypes } from '../../store/models/events/types'
 
 type CardRowProps = {
   card: ICard
 }
 
 const CardRow: React.FC<CardRowProps> = ({ card }) => {
+  const { model } = useSelector<Store, UserState>(state => state.user)
   const dispatch: Dispatch<CardReduxEvent> = useDispatch()
 
   return (
@@ -20,9 +24,35 @@ const CardRow: React.FC<CardRowProps> = ({ card }) => {
       </div>
       <div className={styles.cardName}>{card.name}</div>
       <div className={styles.cardActions}>
-        <button onClick={() => dispatch(setCardId(card._id))}>Edit</button>
+        <button
+          onClick={() =>
+            dispatch(
+              callEvent(EventActionTypes.VIEW_CARD, {
+                userId: model.userId,
+                cardId: card._id,
+                totalCards: card.count.total,
+                timestamp: new Date().getTime()
+              })
+            )
+          }
+        >
+          Edit
+        </button>
         &middot;
-        <button onClick={() => dispatch(deleteCard(card._id))}>Delete</button>
+        <button
+          onClick={() =>
+            dispatch(
+              callEvent(EventActionTypes.DELETE_CARD, {
+                userId: model.userId,
+                cardId: card._id,
+                totalCards: card.count.total,
+                timestamp: new Date().getTime()
+              })
+            )
+          }
+        >
+          Delete
+        </button>
       </div>
       <div className={styles.cardCount}>{card.count.total}</div>
     </div>

@@ -6,70 +6,70 @@ export const mock: ICard[] = [
     name: 'Duo',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/703ea030-8527-4a17-bd6f-23763eabfec9.png',
-    count: { total: 0 }
+    count: { total: 10 }
   },
   {
     _id: '5ce27b5b89230f002e13f607',
     name: 'My little pet',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/9f9e1020-55fa-445b-a68d-e8c9ebda55be.png',
-    count: { total: 0 }
+    count: { total: 9 }
   },
   {
     _id: '5ce27b5b89230f002e13f608',
     name: 'Guide me',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/6d8d9eab-54f4-43c7-b4d6-eb7c942aec4b.png',
-    count: { total: 0 }
+    count: { total: 8 }
   },
   {
     _id: '5ce27b5b89230f002e13f609',
     name: "I'll heal you",
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/753c3953-309f-4141-9d7e-078214efca62.png',
-    count: { total: 0 }
+    count: { total: 7 }
   },
   {
     _id: '5ce27b5b89230f002e13f60a',
     name: 'ZING',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/67d34218-12c8-431f-82a5-7fcac3b6a430.png',
-    count: { total: 0 }
+    count: { total: 6 }
   },
   {
     _id: '5ce27b5b89230f002e13f60b',
     name: 'Tattoo time',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/0b19ee4f-da60-4aec-93f1-0050009478e9.png',
-    count: { total: 0 }
+    count: { total: 5 }
   },
   {
     _id: '5ce27b5b89230f002e13f60c',
     name: 'Marathon',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/7963cd65-2361-4948-9003-12bc9771a42f.png',
-    count: { total: 0 }
+    count: { total: 4 }
   },
   {
     _id: '5ce27b5b89230f002e13f60d',
     name: 'Sub day!',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/4928df29-ad2b-40ea-8d3f-17478c5b6db0.png',
-    count: { total: 0 }
+    count: { total: 3 }
   },
   {
     _id: '5ce27b5b89230f002e13f60e',
     name: 'Triple raffle!',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/ddb65c71-593d-48df-b295-e64af2834598.png',
-    count: { total: 0 }
+    count: { total: 2 }
   },
   {
     _id: '5ce27b5b89230f002e13f60f',
     name: 'Get lucky',
     imageUrl:
       'https://static.streamloots.com/e19c7bf6-ca3e-49a8-807e-b2e9a1a47524/da0a1ffd-049e-4fc9-995f-be45d0def7dc.png',
-    count: { total: 0 }
+    count: { total: 1 }
   },
   {
     _id: '5ce27b5b89230f002e13f610',

@@ -12,7 +12,6 @@ const DeckForm: React.FC = () => {
 
   return (
     <div className={styles.deckform}>
-      <h2>Card Details</h2>
       <CardForm card={model.entities.card[index]} />
     </div>
   )
