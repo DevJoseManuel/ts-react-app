@@ -4,10 +4,42 @@
   width: 100%;
   background-color: var(--white);
 }
-.navbar h2 {
+
+.topBar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #edeef0;
-  padding: 10px;
 }
+
+.topBar h2 {
+  margin-left: 16px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.topBar .countName {
+  margin-right: 4px;
+  font-size: 12px;
+  color: var(--grayDark);
+  font-weight: 500;
+}
+
+.topBar .count {
+  margin-left: 4px;
+  margin-right: 12px;
+  width: 38px;
+  min-width: 38px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 22px;
+  background-color: #b53025;
+  color: var(--white);
+}
+
 .main {
   margin-top: 120px;
 }
