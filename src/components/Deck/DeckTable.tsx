@@ -3,6 +3,7 @@ import React from 'react'
 import DeckTableFilter from './DeckTableFilter'
 import DeckTableNoData from './DeckTableNoData'
 import DeckTableBody from './DeckTableBody'
+import DeckTableAlert from './DeckTableAlert'
 import styles from './deck-table.module.css'
 import { useSelector } from 'react-redux'
 import { CardState } from '../../store/models/card/types'
@@ -27,6 +28,7 @@ const DeckTable: React.FC = () => {
           </div>
         </div>
         <DeckTableFilter text={text} />
+        <DeckTableAlert />
       </div>
       <div className={styles.main}>
         {_.isEmpty(rows) ? <DeckTableNoData /> : <DeckTableBody rows={rows} />}

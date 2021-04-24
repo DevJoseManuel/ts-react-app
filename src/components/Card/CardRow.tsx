@@ -22,39 +22,41 @@ const CardRow: React.FC<CardRowProps> = ({ card }) => {
       <div className={styles.cardImage}>
         <img src={card.imageUrl} alt={`Picture of ${card.name}`} />
       </div>
-      <div className={styles.cardName}>{card.name}</div>
-      <div className={styles.cardActions}>
-        <button
-          onClick={() =>
-            dispatch(
-              callEvent(EventActionTypes.VIEW_CARD, {
-                userId: model.userId,
-                cardId: card._id,
-                totalCards: card.count.total,
-                timestamp: new Date().getTime()
-              })
-            )
-          }
-        >
-          Edit
-        </button>
-        &middot;
-        <button
-          onClick={() =>
-            dispatch(
-              callEvent(EventActionTypes.DELETE_CARD, {
-                userId: model.userId,
-                cardId: card._id,
-                totalCards: card.count.total,
-                timestamp: new Date().getTime()
-              })
-            )
-          }
-        >
-          Delete
-        </button>
+      <div className={styles.cardData}>
+        <div className={styles.cardName}>{card.name}</div>
+        <div className={styles.cardActions}>
+          <button
+            onClick={() =>
+              dispatch(
+                callEvent(EventActionTypes.VIEW_CARD, {
+                  userId: model.userId,
+                  cardId: card._id,
+                  totalCards: card.count.total,
+                  timestamp: new Date().getTime()
+                })
+              )
+            }
+          >
+            Edit
+          </button>
+          &middot;
+          <button
+            onClick={() =>
+              dispatch(
+                callEvent(EventActionTypes.DELETE_CARD, {
+                  userId: model.userId,
+                  cardId: card._id,
+                  totalCards: card.count.total,
+                  timestamp: new Date().getTime()
+                })
+              )
+            }
+          >
+            Delete
+          </button>
+        </div>
+        <div className={styles.cardCount}>{card.count.total}</div>
       </div>
-      <div className={styles.cardCount}>{card.count.total}</div>
     </div>
   )
 }
