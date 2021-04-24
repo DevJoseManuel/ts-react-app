@@ -3,6 +3,7 @@ import { put, all, call, takeEvery } from 'redux-saga/effects'
 import { deleteCard, editCard, setCardId } from '../card/actions'
 import { subtractTotalCards } from '../user/actions'
 import { EventReduxEvent, EventActionTypes, IEvent } from './types'
+import { SagaIterator } from 'redux-saga'
 import {
   Analytics1EventNames,
   sendEvent as analytics1
@@ -13,7 +14,7 @@ import {
 } from '../../../api/analytics2'
 
 // watchFetch
-export function* watchCallEvents() {
+export function* watchCallEvents(): SagaIterator<void> {
   yield takeEvery('CALL_EVENT', callEvent)
 }
 

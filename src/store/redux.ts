@@ -6,6 +6,7 @@ import { watchFetchCards } from './models/card/sagas'
 import { watchCallEvents } from './models/events/sagas'
 import { userReducer } from './models/user/reducer'
 import { UserState } from './models/user/types'
+import { SagaIterator } from 'redux-saga'
 
 // Redux.
 export interface Store {
@@ -21,6 +22,6 @@ export const rootReducer = combineReducers({
 export type RootReducer = ReturnType<typeof rootReducer>
 
 // Sagas.
-export const rootSaga = function* root() {
+export const rootSaga = function* root(): SagaIterator<void> {
   yield all([fork(watchFetchCards), fork(watchCallEvents)])
 }

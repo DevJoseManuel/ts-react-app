@@ -3,9 +3,10 @@ import { ICard, CardActionTypes } from './types'
 import { apiFetchCards } from '../../../api/api-cards'
 import { setLoading, setCards } from './actions'
 import { setTotalCards } from '../user/actions'
+import { SagaIterator } from 'redux-saga'
 
 // Watchers.
-export function* watchFetchCards() {
+export function* watchFetchCards(): SagaIterator<void> {
   yield takeEvery(CardActionTypes.FETCH_DATA, fetchCards)
 }
 

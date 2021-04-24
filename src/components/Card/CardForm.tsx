@@ -22,7 +22,11 @@ const CardForm: React.FC<CardFormProps> = ({ card }) => {
 
   return (
     <>
-      <h2>{card.name}</h2>
+      <div className={styles.topBar}>
+        <h2>{card.name}</h2>
+        <div className={styles.countName}>Total cards</div>
+        <div className={styles.count}>{card.count.total}</div>
+      </div>
       <form
         onSubmit={e => {
           e.preventDefault()
