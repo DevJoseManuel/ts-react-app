@@ -11,7 +11,8 @@ export function* watchFetchCards(): SagaIterator {
 }
 
 // Working.
-export function* fetchCards(): SagaIterator {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function* fetchCards(): any {
   try {
     yield put(setLoading(true))
     const data: ICard[] = yield call(apiFetchCards)

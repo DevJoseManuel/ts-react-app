@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import sagaHelper from 'redux-saga-testing'
 import { put, call } from 'redux-saga/effects'
 import { setCards, setError, setLoading } from './actions'
