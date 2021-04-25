@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:watch": "npm test -- --watch",
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production"

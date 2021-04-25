@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1619377132345" clover="3.2.0">
+  <project timestamp="1619377132345" name="All files">
+    <metrics statements="195" coveredstatements="170" conditionals="43" coveredconditionals="32" methods="50" coveredmethods="36" elements="288" coveredelements="238" complexity="0" loc="195" ncloc="195" packages="6" files="17" classes="17"/>
+    <package name="api">
+      <metrics statements="19" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="2"/>
+      <file name="analytics1.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/api/analytics1.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="analytics2.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/api/analytics2.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="api-cards.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/api/api-cards.ts">
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="mock-data.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/api/mock-data.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Card">
+      <metrics statements="30" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7"/>
+      <file name="CardForm.tsx" path="/media/josemanuel/data/ts-apps/ts-react-app/src/components/Card/CardForm.tsx">
+        <metrics statements="18" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+      </file>
+      <file name="CardRow.tsx" path="/media/josemanuel/data/ts-apps/ts-react-app/src/components/Card/CardRow.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="store">
+      <metrics statements="9" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="redux.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/redux.ts">
+        <metrics statements="9" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="1"/>
+      </file>
+    </package>
+    <package name="store.models.card">
+      <metrics statements="78" coveredstatements="74" conditionals="19" coveredconditionals="17" methods="20" coveredmethods="17"/>
+      <file name="actions.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/card/actions.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="38" count="5" type="stmt"/>
+        <line num="40" count="5" type="stmt"/>
+        <line num="45" count="5" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="52" count="5" type="stmt"/>
+        <line num="54" count="9" type="stmt"/>
+        <line num="59" count="5" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="66" count="5" type="stmt"/>
+        <line num="68" count="9" type="stmt"/>
+      </file>
+      <file name="reducer.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/card/reducer.ts">
+        <metrics statements="33" coveredstatements="30" conditionals="15" coveredconditionals="14" methods="5" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="37" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="25" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="78" count="4" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="113" count="12" type="stmt"/>
+        <line num="117" count="3" type="stmt"/>
+      </file>
+      <file name="sagas.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/card/sagas.ts">
+        <metrics statements="14" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="72" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="1" falsecount="0"/>
+      </file>
+      <file name="types.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/card/types.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="12" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="23" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="store.models.events">
+      <metrics statements="38" coveredstatements="27" conditionals="11" coveredconditionals="3" methods="7" coveredmethods="5"/>
+      <file name="actions.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/events/actions.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+      </file>
+      <file name="sagas.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/events/sagas.ts">
+        <metrics statements="32" coveredstatements="21" conditionals="9" coveredconditionals="1" methods="5" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="52" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/events/types.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="16" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="store.models.user">
+      <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
+      <file name="actions.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/user/actions.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+      </file>
+      <file name="reducer.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/user/reducer.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="15" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="44" count="12" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+      </file>
+      <file name="types.ts" path="/media/josemanuel/data/ts-apps/ts-react-app/src/store/models/user/types.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="7" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
