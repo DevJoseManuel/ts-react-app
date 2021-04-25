@@ -9,14 +9,11 @@ import { rootReducer, rootSaga } from './store/redux'
 
 // Sagas & Redux
 const sagaMiddleware = createSagaMiddleware()
-const store = createStore(
+export const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(sagaMiddleware))
 )
 sagaMiddleware.run(rootSaga)
-
-// Simulating user-id
-localStorage.setItem('userId', 'user-test')
 
 ReactDOM.render(
   <Provider store={store}>
