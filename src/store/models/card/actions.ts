@@ -25,10 +25,10 @@ export const editCard = (
   imageUrl: string
 ): {
   type: string
-  payload: { _id: string; name: string; imageUrl: string }
+  payload: { cardId: string; name: string; imageUrl: string }
 } => ({
   type: CardActionTypes.EDIT_CARD,
-  payload: { _id, name, imageUrl }
+  payload: { cardId: _id, name, imageUrl }
 })
 
 export const fetchData = (): { type: string } => ({

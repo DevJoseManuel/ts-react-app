@@ -1,20 +1,23 @@
 import _ from 'lodash'
 import { normalize, schema } from 'normalizr'
-import { Reducer } from 'redux'
+import { Reducer, AnyAction } from 'redux'
 import { CardActionTypes, CardState } from './types'
 
 // Define card schema.
 const cardSchema = new schema.Entity('card', {}, { idAttribute: '_id' })
-const deckSchema = [cardSchema]
+export const deckSchema = [cardSchema]
 
 /** Card initial state. */
-const initialState: CardState = {
+export const initialState: CardState = {
   model: { entities: { card: {} }, result: [] },
   ui: { loading: false }
 }
 
 /** Card reducer. */
-const reducer: Reducer<CardState> = (state = initialState, action) => {
+const reducer: Reducer<CardState> = (
+  state = initialState,
+  action: AnyAction
+) => {
   switch (action.type) {
     case CardActionTypes.CLEAR_ALERT:
       return {
@@ -22,16 +25,16 @@ const reducer: Reducer<CardState> = (state = initialState, action) => {
         ui: _.omit(state.ui, 'message')
       }
 
-    case CardActionTypes.CLEAR_FILTER:
-      return {
-        ...state,
-        ui: _.omit(state.ui, 'filter')
-      }
-
     case CardActionTypes.CLEAR_CARD_ID:
       return {
         ...state,
         ui: _.omit(state.ui, 'cardId')
+      }
+
+    case CardActionTypes.CLEAR_FILTER:
+      return {
+        ...state,
+        ui: _.omit(state.ui, 'filter')
       }
 
     case CardActionTypes.DELETE_CARD: {
@@ -52,11 +55,11 @@ const reducer: Reducer<CardState> = (state = initialState, action) => {
     case CardActionTypes.EDIT_CARD: {
       const edited = _.merge(
         {},
-        state.model.entities.card[action.payload._id],
+        state.model.entities.card[action.payload.cardId],
         action.payload
       )
       const card = _.merge({}, state.model.entities.card, {
-        [action.payload._id]: edited
+        [action.payload.cardId]: edited
       })
       return {
         model: { ...state.model, entities: { card } },
@@ -70,6 +73,7 @@ const reducer: Reducer<CardState> = (state = initialState, action) => {
         ui: { ...state.ui, cardId: action.payload.cardId }
       }
     }
+
     case CardActionTypes.SET_CARDS:
       return {
         ...state,
@@ -79,7 +83,7 @@ const reducer: Reducer<CardState> = (state = initialState, action) => {
     case CardActionTypes.SET_ERROR:
       return {
         ...state,
-        error: action.payload.error
+        ui: { ...state.ui, error: action.payload.error }
       }
 
     case CardActionTypes.SET_FILTER:

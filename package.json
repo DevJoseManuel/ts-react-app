@@ -4,6 +4,8 @@
   "description": "Frontend Challenge",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production"
   },
@@ -11,7 +13,6 @@
   "author": "José Manuel Alvarez",
   "license": "ISC",
   "dependencies": {
-    "@types/lodash": "^4.14.168",
     "lodash": "^4.17.21",
     "normalizr": "^3.6.1",
     "react": "^16.14.0",
@@ -28,7 +29,11 @@
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
     "@babel/runtime": "^7.13.17",
+    "@jackfranklin/test-data-bot": "^1.3.0",
+    "@types/faker": "^4.1.12",
     "@types/fork-ts-checker-webpack-plugin": "^0.4.5",
+    "@types/jest": "^26.0.22",
+    "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.3",
     "@types/react-autocomplete": "^1.8.5",
     "@types/react-dom": "^17.0.3",
@@ -52,6 +57,7 @@
     "postcss-url": "^10.1.3",
     "redux-devtools-extension": "^2.13.9",
     "style-loader": "^2.0.0",
+    "ts-jest": "^26.5.5",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.35.0",

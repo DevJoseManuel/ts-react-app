@@ -10,6 +10,16 @@ export enum UserActionTypes {
   SUBTRACT_TOTAL_CARDS = 'user/SUBTRACT_TOTAL_CARDS'
 }
 
+export type UserActionPayloads = {
+  userId?: string
+  totalCards?: number
+}
+
+export type UserAction = {
+  type: UserActionTypes
+  payload: UserActionPayloads
+}
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface UserReduxModel extends IUser {}
 

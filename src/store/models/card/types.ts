@@ -23,6 +23,21 @@ export enum CardActionTypes {
   SET_LOADING = 'card/SET_LOADING'
 }
 
+export type CardActionPayloads = {
+  cards?: ICard[]
+  cardId?: string
+  error?: string
+  filter?: string
+  imageUrl?: string
+  isLoading?: boolean
+  name?: string
+}
+
+export type CardAction = {
+  type: CardActionTypes
+  payload?: CardActionPayloads
+}
+
 export interface CardReduxModel {
   entities: {
     card: { [_id: string]: ICard }
@@ -43,7 +58,10 @@ export interface CardReduxUI {
 
 export type CardReduxEvent =
   | { type: string }
-  | { type: string; payload: { _id: string; name: string; imageUrl: string } }
+  | {
+      type: string
+      payload: { cardId: string; name: string; imageUrl: string }
+    }
   | { type: string; payload: { cards: ICard[] } }
   | { type: string; payload: { cardId: string } }
   | { type: string; payload: { error: string } }
