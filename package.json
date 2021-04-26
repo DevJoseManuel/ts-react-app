@@ -4,11 +4,14 @@
   "description": "Frontend Challenge",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "start": "webpack serve --mode development --open",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:watch": "npm test -- --watch",
-    "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "test:e2e:dev": "webpack serve --mode development && cypress open",
+    "test:watch": "npm test -- --watch"
   },
   "keywords": [],
   "author": "José Manuel Alvarez",
