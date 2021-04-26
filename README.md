@@ -37,3 +37,21 @@ To obtain the coverage report:
 ```bash
 $ npm run test:coverage
 ```
+
+To view end to end test (remember application must be running):
+
+```bash
+$ npm run cy:open
+```
+
+To run end to end test (remember application must be running):
+
+```bash
+$ npm run cy:run
+```
+
+or, if you prefer, you can run the application (in development mode) and end to end test at the same time:
+
+```bash
+$ npm run test:e2e:dev
+```
