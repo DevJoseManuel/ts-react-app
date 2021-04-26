@@ -55,3 +55,4 @@ or, if you prefer, you can run the application (in development mode) and end to 
 ```bash
 $ npm run test:e2e:dev
 ```
+
